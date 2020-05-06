@@ -29,5 +29,6 @@ prog : bin/toplevel.bin
 	icesprog bin/toplevel.bin
 
 clean :
+	rm -f ../../../Murax.v
 	rm -rf bin
 	rm -f Murax.v*.bin
