@@ -2,13 +2,14 @@
 
 module toplevel(
     input   clk,
-    input   P4_2,
-    input   P4_1,
-    output  P4_3,
-    input   P4_4,
+    input   P4_2,   /* jtag_tck */
+    input   P4_1,   /* jtag_tdi */
+    output  P4_3,   /* jtag_tdo */
+    input   P4_4,   /* jtag_tms */
     output  TX,
     input   RX,
-    output [7:0] io_led
+    output [7:0] io_pmod2,
+    output [7:0] io_pmod3
   );
   
   wire [31:0] io_gpioA_read;
@@ -27,7 +28,8 @@ module toplevel(
     .GLOBAL_BUFFER_OUTPUT ( io_jtag_tck)
   );
 
-  assign io_led = io_gpioA_write[7 : 0];
+  assign io_pmod2 = io_gpioA_write[15 : 8];
+  assign io_pmod3 = io_gpioA_write[7 : 0];
 
   Murax murax ( 
     .io_asyncReset(0),

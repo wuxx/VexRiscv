@@ -54,14 +54,23 @@ set_io P4_2     20
 set_io P4_3     19
 set_io P4_4     18
 
-set_io io_led[0] 34
-set_io io_led[1] 31
-set_io io_led[2] 27
-set_io io_led[3] 25
-set_io io_led[4] 23
-set_io io_led[5] 26
-set_io io_led[6] 28
-set_io io_led[7] 32
+set_io io_pmod2[0] 46
+set_io io_pmod2[1] 44
+set_io io_pmod2[2] 42
+set_io io_pmod2[3] 37
+set_io io_pmod2[4] 36
+set_io io_pmod2[5] 38
+set_io io_pmod2[6] 43
+set_io io_pmod2[7] 45
+
+set_io io_pmod3[0] 34
+set_io io_pmod3[1] 31
+set_io io_pmod3[2] 27
+set_io io_pmod3[3] 25
+set_io io_pmod3[4] 23
+set_io io_pmod3[5] 26
+set_io io_pmod3[6] 28
+set_io io_pmod3[7] 32
 
 
 #spi
