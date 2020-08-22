@@ -3,10 +3,10 @@ VERILOG = ../../../Murax.v toplevel.v
 generate :
 	(cd ../../..; sbt "runMain vexriscv.demo.MuraxWithRamInit")
 
-../../../Murax.v :
+../../../Murax.v : ../../../src/main/ressource/hex/muraxDemo.hex
 	(cd ../../..; sbt "runMain vexriscv.demo.MuraxWithRamInit")
 
-../../../Murax.v*.bin:
+../../../Murax.v*.bin :
 
 bin/toplevel.blif : ${VERILOG} ../../../Murax.v*.bin
 	mkdir -p bin
